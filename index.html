@@ -55,52 +55,53 @@
   }
   .about-split {
     display: grid;
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: 260px 1fr;
     gap: 2.5rem;
     align-items: start;
     margin-bottom: 3rem;
   }
-  .profile-left { text-align: center; }
-  .profile-photo {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    background: #e8f5e9;
+  .profile-left {
+    background: #f1f8f4;
+    padding: 1.5rem 1.2rem;
+    border-radius: 8px;
+    border-left: 4px solid #2d6a4f;
   }
   .profile-left .name {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 0.3rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2d6a4f;
+    margin-bottom: 0.5rem;
+    text-align: center;
   }
   .profile-left .title {
-    font-size: 0.85rem;
-    color: #666;
-    margin-bottom: 0.3rem;
-    line-height: 1.4;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+    text-align: center;
   }
   .profile-left .affiliation {
-    font-size: 0.85rem;
-    color: #666;
+    font-size: 0.88rem;
+    color: #555;
     font-weight: 600;
     margin-bottom: 1rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #cfe4d8;
   }
-  .profile-left .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 0.6rem;
-    flex-wrap: wrap;
+  .profile-left .quick-info {
+    font-size: 0.85rem;
+    color: #555;
   }
-  .profile-left .social-icons a {
+  .profile-left .quick-info div { margin-bottom: 0.6rem; }
+  .profile-left .quick-info .label {
+    font-weight: 600;
     color: #2d6a4f;
-    font-size: 1.3rem;
-    text-decoration: none;
-    transition: opacity 0.3s;
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
-  .profile-left .social-icons a:hover { opacity: 0.7; }
   .about-text p { margin-bottom: 1rem; }
   .about-text strong { color: #2d6a4f; }
   .interests-education {
@@ -264,23 +265,6 @@
     font-weight: 600;
     margin-right: 0.5rem;
   }
-  .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 0.8rem;
-    margin-top: 1rem;
-  }
-  .contact-card {
-    background: #f1f8f4;
-    padding: 0.8rem 1rem;
-    border-radius: 6px;
-    border-left: 3px solid #2d6a4f;
-    font-size: 0.9rem;
-  }
-  .contact-card .label { color: #888; font-size: 0.78rem; margin-bottom: 0.2rem; }
-  .contact-card a { color: #2d6a4f; text-decoration: none; font-weight: 600; }
-  .contact-card a:hover { text-decoration: underline; }
-  .contact-card .text { color: #2c3e50; font-weight: 600; }
   footer {
     background: #f1f8f4;
     color: #666;
@@ -310,7 +294,6 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#awards">Awards</a></li>
-      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -320,18 +303,36 @@
   <section id="about" style="border-top:none; padding-top:1.5rem;">
     <div class="about-split">
       <div class="profile-left">
-        <img src="khadija.jpg" alt="Dr. Khadija Raziq" class="profile-photo">
         <div class="name">Dr. Khadija Raziq</div>
         <div class="title">PhD, Molecular Genetics<br>Postdoctoral Researcher</div>
         <div class="affiliation">Anhui Agricultural University<br>Hefei, China</div>
-        <div class="social-icons">
-          <a href="mailto:khadijagenetics@yahoo.com" title="Email">✉</a>
-          <a href="mailto:kdj.genetics@hrbmu.edu.cn" title="Academic Email">📧</a>
+        <div class="quick-info">
+          <div>
+            <span class="label">Specialization</span>
+            Molecular Genetics · Cancer Research · Nanomedicine
+          </div>
+          <div>
+            <span class="label">Publications</span>
+            12+ SCI/Q1 Journals
+          </div>
+          <div>
+            <span class="label">Current Position</span>
+            Postdoctoral Fellow (2024 – 2027)
+          </div>
+          <div>
+            <span class="label">Experience</span>
+            7+ Years in Research &amp; Teaching
+          </div>
+          <div style="margin-top:1rem; padding-top:1rem; border-top:1px solid #cfe4d8; text-align:center;">
+            <a href="https://scholar.google.com/citations?user=uzFxijYAAAAJ&hl=en&oi=ao" target="_blank" style="display:inline-block; background:#2d6a4f; color:#fff; padding:0.5rem 1rem; border-radius:4px; text-decoration:none; font-size:0.85rem; font-weight:600;">
+              🎓 Google Scholar
+            </a>
+          </div>
         </div>
       </div>
       <div class="about-text">
         <p>I am a <strong>molecular geneticist and postdoctoral researcher</strong> at Anhui Agricultural University, Hefei, China, with a PhD in Genetics from Harbin Medical University. My research spans <strong>cancer genetics</strong>, <strong>non-coding RNAs (miRNA and lncRNA)</strong>, <strong>nanovaccination</strong>, <strong>antimicrobial biomaterials</strong>, and the molecular mechanisms of <strong>chemotherapy resistance</strong> in gastric and gastrointestinal cancers.</p>
-        <p>I bring strong theoretical and practical expertise in <strong>human genetics</strong> and <strong>molecular biology</strong>, with hands-on experience in genomic, biochemical, and molecular techniques for mutation detection and gene identification. As a highly motivated researcher and educator, I am passionate about developing innovative therapeutic strategies — including immuno- and chemo-therapies, nanovaccines, and metal complex-based antimicrobials — for cancer and infectious diseases.</p>
+        <p>I bring strong theoretical and practical expertise in <strong>human genetics</strong>, <strong>molecular biology</strong>, <strong>in vivo cancer models</strong>, and <strong>advanced imaging techniques</strong> including flow cytometry and confocal microscopy. As a highly motivated researcher and educator, I am passionate about developing innovative therapeutic strategies — including immuno- and chemo-therapies, nanovaccines, and metal complex-based antimicrobials — for cancer and infectious diseases.</p>
         <div class="interests-education">
           <div class="info-block">
             <h4>Research Interests</h4>
@@ -341,7 +342,8 @@
               <li>Nanovaccination</li>
               <li>Antimicrobial Biomaterials</li>
               <li>Chemotherapy Resistance</li>
-              <li>Molecular Biology</li>
+              <li>Nanomaterial Characterization</li>
+              <li>In Vivo Cancer Models</li>
             </ul>
           </div>
           <div class="info-block">
@@ -392,12 +394,12 @@
         <p>Design and evaluation of novel nanocomposites, metal complexes, and photodynamic therapies for biofilm disruption and anti-infective treatment.</p>
       </div>
       <div class="research-card">
-        <h3>Chemotherapy Resistance</h3>
-        <p>Understanding resistance mechanisms in cancer cells and developing strategies to overcome drug resistance.</p>
+        <h3>In Vivo Cancer Models</h3>
+        <p>Mice handling, tumor induction, and preclinical evaluation of therapeutic strategies using animal models.</p>
       </div>
       <div class="research-card">
-        <h3>Microbial &amp; Molecular Diagnostics</h3>
-        <p>Identification and characterization of pathogenic bacteria, antibiotic susceptibility, mutation detection, and gene identification.</p>
+        <h3>Nanomaterial Characterization</h3>
+        <p>Characterization of nanomaterials and biomaterials using advanced imaging and spectroscopy techniques including confocal microscopy and flow cytometry.</p>
       </div>
     </div>
   </section>
@@ -493,7 +495,7 @@
     <div class="experience-item">
       <h3>Postdoctoral Researcher</h3><span class="year">Feb 2024 – Feb 2027</span>
       <span class="org">Anhui Agricultural University, Hefei, China</span>
-      <p>Current postdoctoral research focused on molecular genetics, cancer biology, nanovaccination, and antimicrobial biomaterials.</p>
+      <p>Current postdoctoral research focused on molecular genetics, cancer biology, nanovaccination, in vivo cancer models, and antimicrobial biomaterials.</p>
     </div>
     <div class="experience-item">
       <h3>Assistant Professor</h3><span class="year">March 2022 – August 2023</span>
@@ -519,6 +521,45 @@
 
   <section id="skills">
     <h2>Technical Skills</h2>
+
+    <div class="skills-section">
+      <h3>Advanced Research Techniques</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Flow Cytometry</span>
+        <span class="skill-tag">Confocal Laser Scanning Microscopy</span>
+        <span class="skill-tag">Fluorescence Microscopy</span>
+        <span class="skill-tag">Nanomaterial Characterization</span>
+        <span class="skill-tag">UV-Vis Spectroscopy</span>
+        <span class="skill-tag">SEM/TEM Imaging</span>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <h3>In Vivo &amp; In Vitro Experimentation</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Mice Handling</span>
+        <span class="skill-tag">Tumor Induction (Mice Models)</span>
+        <span class="skill-tag">Animal Dissection</span>
+        <span class="skill-tag">Tissue Sampling</span>
+        <span class="skill-tag">Drug Administration</span>
+        <span class="skill-tag">In Vivo Imaging</span>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <h3>Cell Culture &amp; Related Experiments</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Mammalian Cell Culture</span>
+        <span class="skill-tag">Cell Line Maintenance</span>
+        <span class="skill-tag">Transfection</span>
+        <span class="skill-tag">Cytotoxicity Assays (MTT/CCK-8)</span>
+        <span class="skill-tag">Apoptosis Assays</span>
+        <span class="skill-tag">Cell Staining</span>
+        <span class="skill-tag">Wound Healing Assay</span>
+        <span class="skill-tag">Colony Formation Assay</span>
+      </div>
+    </div>
+
     <div class="skills-section">
       <h3>Molecular Biology Techniques</h3>
       <div class="skill-tags">
@@ -529,19 +570,21 @@
         <span class="skill-tag">PAGE</span>
         <span class="skill-tag">DNA Quantification</span>
         <span class="skill-tag">Gel Electrophoresis</span>
+        <span class="skill-tag">Western Blot</span>
       </div>
     </div>
+
     <div class="skills-section">
-      <h3>Cell &amp; Genetic Analysis</h3>
+      <h3>Genetic Analysis</h3>
       <div class="skill-tags">
-        <span class="skill-tag">Cell Culturing</span>
-        <span class="skill-tag">Cell Staining</span>
         <span class="skill-tag">Karyotyping</span>
         <span class="skill-tag">Mutation Detection</span>
         <span class="skill-tag">Gene Identification</span>
         <span class="skill-tag">ceRNA Network Analysis</span>
+        <span class="skill-tag">Gene Expression Analysis</span>
       </div>
     </div>
+
     <div class="skills-section">
       <h3>Microbiology</h3>
       <div class="skill-tags">
@@ -549,8 +592,10 @@
         <span class="skill-tag">Antibiotic Susceptibility Testing</span>
         <span class="skill-tag">Biochemical Testing</span>
         <span class="skill-tag">Molecular Characterization</span>
+        <span class="skill-tag">Biofilm Analysis</span>
       </div>
     </div>
+
     <div class="skills-section">
       <h3>Research &amp; Analysis</h3>
       <div class="skill-tags">
@@ -559,6 +604,7 @@
         <span class="skill-tag">Grant Proposals</span>
         <span class="skill-tag">Student Supervision</span>
         <span class="skill-tag">Laboratory Management</span>
+        <span class="skill-tag">Statistical Analysis (GraphPad, SPSS)</span>
       </div>
     </div>
   </section>
@@ -574,28 +620,6 @@
       <div class="award-item"><span class="award-year">2016</span><strong>Team Award</strong> — For successfully organizing annual "Diabetes and Metabolic Disorders Symposium" at NIBGE, Faisalabad.</div>
       <div class="award-item"><span class="award-year">2013</span><strong>DNA Model Representation Competition Prize</strong> — Hazara University, Mansehra, Pakistan.</div>
       <div class="award-item"><span class="award-year">2009–11</span><strong>Merit Scholarship</strong> — Awarded for Bachelor of Science studies.</div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <div class="label">Primary Email</div>
-        <a href="mailto:khadijagenetics@yahoo.com">khadijagenetics@yahoo.com</a>
-      </div>
-      <div class="contact-card">
-        <div class="label">Academic Email</div>
-        <a href="mailto:kdj.genetics@hrbmu.edu.cn">kdj.genetics@hrbmu.edu.cn</a>
-      </div>
-      <div class="contact-card">
-        <div class="label">Phone / WhatsApp</div>
-        <span class="text">+86 15655192757</span>
-      </div>
-      <div class="contact-card">
-        <div class="label">Current Affiliation</div>
-        <span class="text">Anhui Agricultural University, Hefei, China</span>
-      </div>
     </div>
   </section>
 
