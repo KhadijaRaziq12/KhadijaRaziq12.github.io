@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Khadija Raziq | Molecular Geneticist & Postdoctoral Researcher</title>
+<meta name="description" content="PhD in Molecular Genetics. Postdoctoral Researcher at Anhui Agricultural University. Research in cancer genetics, non-coding RNA, nanovaccines, and chemoresistance.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: #fff;
+    font-size: 15px;
+  }
+  nav {
+    background: #2d6a4f;
+    padding: 0.7rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  nav .nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  nav .nav-name {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+  }
+  nav a:hover { opacity: 0.75; }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .about-split {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    margin-bottom: 3rem;
+  }
+  .profile-left { text-align: center; }
+  .profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: #e8f5e9;
+  }
+  .profile-left .name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.3rem;
+  }
+  .profile-left .title {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+  }
+  .profile-left .affiliation {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .profile-left .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .profile-left .social-icons a {
+    color: #2d6a4f;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+  .profile-left .social-icons a:hover { opacity: 0.7; }
+  .about-text p { margin-bottom: 1rem; }
+  .about-text strong { color: #2d6a4f; }
+  .interests-education {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  .info-block h4 {
+    color: #2c3e50;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.3rem;
+  }
+  .info-block ul {
+    list-style: none;
+    padding: 0;
+  }
+  .info-block li {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+  .info-block li::before {
+    content: "▸";
+    color: #2d6a4f;
+    position: absolute;
+    left: 0;
+  }
+  .info-block .edu-item {
+    font-size: 0.88rem;
+    margin-bottom: 0.6rem;
+    padding-left: 0;
+  }
+  .info-block .edu-item::before { content: ""; }
+  .info-block .edu-degree { font-weight: 600; color: #2c3e50; }
+  .info-block .edu-school { color: #666; font-style: italic; display: block; }
+  .info-block .edu-year { color: #888; font-size: 0.82rem; }
+  section {
+    padding: 2.5rem 0 2rem 0;
+    border-top: 1px solid #eee;
+  }
+  section h2 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+  }
+  section h2::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 1.1rem;
+    background: #2d6a4f;
+    margin-right: 0.6rem;
+    vertical-align: middle;
+    border-radius: 2px;
+  }
+  .research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .research-card {
+    background: #f1f8f4;
+    padding: 1rem 1.2rem;
+    border-radius: 6px;
+    border-left: 3px solid #2d6a4f;
+  }
+  .research-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  .research-card p { font-size: 0.85rem; color: #555; }
+  .publications-intro { margin-bottom: 1rem; font-size: 0.95rem; color: #555; }
+  .publication {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+  }
+  .publication:last-child { border-bottom: none; }
+  .pub-title { font-weight: 600; color: #2c3e50; margin-bottom: 0.2rem; }
+  .pub-venue { color: #666; font-style: italic; font-size: 0.85rem; margin-bottom: 0.2rem; }
+  .pub-tag {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #2d6a4f;
+    padding: 0.1rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    margin-right: 0.3rem;
+    margin-top: 0.2rem;
+  }
+  .pub-tag.sci { background: #c8e6c9; color: #1b5e20; }
+  .pub-tag.review { background: #fff3cd; color: #856404; }
+  .pub-tag.if { background: #e3f2fd; color: #0d47a1; }
+  .experience-item, .education-item {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+  }
+  .experience-item:last-child, .education-item:last-child { border-bottom: none; }
+  .experience-item h3, .education-item h3 {
+    color: #2c3e50;
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline-block;
+  }
+  .experience-item .year, .education-item .year {
+    float: right;
+    color: #888;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  .experience-item .org, .education-item .institution {
+    color: #666;
+    font-style: italic;
+    display: block;
+    margin-top: 0.1rem;
+    font-size: 0.88rem;
+  }
+  .experience-item p, .education-item p { margin-top: 0.3rem; color: #555; font-size: 0.85rem; }
+  .skills-section { margin-bottom: 1.2rem; }
+  .skills-section h3 {
+    color: #2c3e50;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .skill-tag {
+    background: #f1f8f4;
+    color: #2c3e50;
+    padding: 0.25rem 0.7rem;
+    border-radius: 3px;
+    font-size: 0.82rem;
+    border: 1px solid #cfe4d8;
+  }
+  .award-item {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #555;
+    border-bottom: 1px dashed #eee;
+  }
+  .award-item:last-child { border-bottom: none; }
+  .award-item strong { color: #2c3e50; }
+  .award-year {
+    display: inline-block;
+    background: #2d6a4f;
+    color: #fff;
+    padding: 0.1rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  .contact-card {
+    background: #f1f8f4;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    border-left: 3px solid #2d6a4f;
+    font-size: 0.9rem;
+  }
+  .contact-card .label { color: #888; font-size: 0.78rem; margin-bottom: 0.2rem; }
+  .contact-card a { color: #2d6a4f; text-decoration: none; font-weight: 600; }
+  .contact-card a:hover { text-decoration: underline; }
+  .contact-card .text { color: #2c3e50; font-weight: 600; }
+  footer {
+    background: #f1f8f4;
+    color: #666;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    border-top: 1px solid #eee;
+  }
+  @media (max-width: 768px) {
+    .about-split { grid-template-columns: 1fr; text-align: center; }
+    .interests-education { grid-template-columns: 1fr; }
+    nav ul { gap: 1rem; }
+    nav .nav-container { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <div class="nav-name">Dr. Khadija Raziq</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <section id="about" style="border-top:none; padding-top:1.5rem;">
+    <div class="about-split">
+      <div class="profile-left">
+        <img src="khadija.jpg" alt="Dr. Khadija Raziq" class="profile-photo">
+        <div class="name">Dr. Khadija Raziq</div>
+        <div class="title">PhD, Molecular Genetics<br>Postdoctoral Researcher</div>
+        <div class="affiliation">Anhui Agricultural University<br>Hefei, China</div>
+        <div class="social-icons">
+          <a href="mailto:khadijagenetics@yahoo.com" title="Email">✉</a>
+          <a href="mailto:kdj.genetics@hrbmu.edu.cn" title="Academic Email">📧</a>
+        </div>
+      </div>
+      <div class="about-text">
+        <p>I am a <strong>molecular geneticist and postdoctoral researcher</strong> at Anhui Agricultural University, Hefei, China, with a PhD in Genetics from Harbin Medical University. My research spans <strong>cancer genetics</strong>, <strong>non-coding RNAs (miRNA and lncRNA)</strong>, <strong>nanovaccination</strong>, <strong>antimicrobial biomaterials</strong>, and the molecular mechanisms of <strong>chemotherapy resistance</strong> in gastric and gastrointestinal cancers.</p>
+        <p>I bring strong theoretical and practical expertise in <strong>human genetics</strong> and <strong>molecular biology</strong>, with hands-on experience in genomic, biochemical, and molecular techniques for mutation detection and gene identification. As a highly motivated researcher and educator, I am passionate about developing innovative therapeutic strategies — including immuno- and chemo-therapies, nanovaccines, and metal complex-based antimicrobials — for cancer and infectious diseases.</p>
+        <div class="interests-education">
+          <div class="info-block">
+            <h4>Research Interests</h4>
+            <ul>
+              <li>Cancer Genetics</li>
+              <li>Non-coding RNA (miRNA, lncRNA)</li>
+              <li>Nanovaccination</li>
+              <li>Antimicrobial Biomaterials</li>
+              <li>Chemotherapy Resistance</li>
+              <li>Molecular Biology</li>
+            </ul>
+          </div>
+          <div class="info-block">
+            <h4>Education</h4>
+            <div class="edu-item">
+              <span class="edu-degree">PhD in Genetics</span>
+              <span class="edu-school">Harbin Medical University, China</span>
+              <span class="edu-year">2018 – 2022 · Chinese Govt. Scholarship</span>
+            </div>
+            <div class="edu-item">
+              <span class="edu-degree">MPhil in Genetics</span>
+              <span class="edu-school">Hazara University, Pakistan</span>
+              <span class="edu-year">2013 – 2016 · Merit (3.94/4)</span>
+            </div>
+            <div class="edu-item">
+              <span class="edu-degree">MSc in Genetics</span>
+              <span class="edu-school">Hazara University, Pakistan</span>
+              <span class="edu-year">2011 · Merit (3.74/4)</span>
+            </div>
+            <div class="edu-item">
+              <span class="edu-degree">BSc in Biological Sciences</span>
+              <span class="edu-school">Punjab University, Pakistan</span>
+              <span class="edu-year">2009 – 2013</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>Research Areas</h2>
+    <div class="research-grid">
+      <div class="research-card">
+        <h3>Cancer Genetics</h3>
+        <p>Molecular mechanisms underlying cancer development, progression, and chemoresistance, with focus on gastric and gastrointestinal cancers.</p>
+      </div>
+      <div class="research-card">
+        <h3>Non-coding RNA</h3>
+        <p>Role of miRNA and lncRNA in gene regulation, cancer biology, and competitive endogenous RNA (ceRNA) networks.</p>
+      </div>
+      <div class="research-card">
+        <h3>Nanovaccination</h3>
+        <p>Advancing nanovaccination strategies for combinatory immune regulation therapies to treat infectious diseases and cancer.</p>
+      </div>
+      <div class="research-card">
+        <h3>Antimicrobial Biomaterials</h3>
+        <p>Design and evaluation of novel nanocomposites, metal complexes, and photodynamic therapies for biofilm disruption and anti-infective treatment.</p>
+      </div>
+      <div class="research-card">
+        <h3>Chemotherapy Resistance</h3>
+        <p>Understanding resistance mechanisms in cancer cells and developing strategies to overcome drug resistance.</p>
+      </div>
+      <div class="research-card">
+        <h3>Microbial &amp; Molecular Diagnostics</h3>
+        <p>Identification and characterization of pathogenic bacteria, antibiotic susceptibility, mutation detection, and gene identification.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Selected Publications</h2>
+    <p class="publications-intro">Author of <strong>12+ peer-reviewed publications</strong> in high-impact SCI/Q1 journals including <em>International Immunopharmacology</em> (IF 5.60), <em>Biomedicine &amp; Pharmacotherapy</em> (IF 7.4), <em>Vaccines</em>, <em>Frontiers in Oncology</em>, and <em>Biomedical Materials</em>. Combined research citations: 100+.</p>
+    <div class="publications-list">
+      <div class="publication">
+        <div class="pub-title">Photodynamic antibacterial therapy by metal complex mediators: A new promise for eliminating drug-resistant infectious microorganisms</div>
+        <div class="pub-venue">Zhou R., Raziq K., Xue T., Sun D. Inorganica Chimica Acta, Vol. 587, 122818, 2025</div>
+        <span class="pub-tag sci">SCI · Published</span>
+        <span class="pub-tag if">IF: 3.30</span>
+        <span class="pub-tag">Q2</span>
+      </div>
+      <div class="publication">
+        <div class="pub-title">The shift toward nanovaccination: A comprehensive review of advancing nanovaccination for combinatory immune regulation therapies to treat infectious diseases and cancer</div>
+        <div class="pub-venue">Raziq K., Xue T., Sun D. International Immunopharmacology, Vol. 161, 115090, 2025</div>
+        <span class="pub-tag sci">SCI · Published</span>
+        <span class="pub-tag">First Author</span>
+        <span class="pub-tag if">IF: 5.60</span>
+        <span class="pub-tag">Q1</span>
+      </div>
+      <div class="publication">
+        <div class="pub-title">An aromatic ruthenium complex with high antimicrobial efficiency by disrupting biofilms and recruiting M2 macrophages</div>
+        <div class="pub-venue">Zhou R., Gao J., Li Y., Raziq K., Chen L., Sun D. Inorganica Chimica Acta, Vol. 578, 122546, 2025</div>
+        <span class="pub-tag sci">SCI · Published</span>
+        <span class="pub-tag if">IF: 3.30</span>
+        <span class="pub-tag">Q2</span>
+      </div>
+      <div class="publication">
+        <div class="pub-title">Impact of Selenium nanoparticles in diet on the composition of fillets and antioxidant status of Cirrhinus mrigala</div>
+        <div class="pub-venue">Raziq K., Riaz U., Tariq M., Safdar M., Saeed S., Ibáñez-Arancibia E., et al. Brazilian Journal of Biology, Vol. 85, e294951, 2025</div>
+        <span class="pub-tag sci">SCI · Published</span>
+        <span class="pub-tag">First Author</span>
+        <span class="pub-tag">Q2</span>
+      </div>
+      <div class="publication">
+        <div class="pub-title">Polyethyleneimine surface-modified silver-selenium nanocomposites for anti-infective treatment of wounds by disrupting biofilms</div>
+        <div class="pub-venue">Li Y., Yang Q., Zhou R., Wang X., Raziq K., Tang M., Wang Z., Sun D. Biomedical Materials, 19(4): 045016, 2024</div>
+        <span class="pub-tag sci">SCI · Published</span>
+        <span class="pub-tag if">IF: 3.90</span>
+      </div>
+      <div class="publication">
+        <div class="pub-title">Genome-Based Multi-Antigenic Epitopes Vaccine Construct Designing against Staphylococcus hominis Using Reverse Vaccinology and Biophysical Approaches</div>
+        <div class="pub-venue">Nawaz M., Ullah A., Al-Harbi A.I., Haq M.U., Hameed A.R., Ahmad S., Aziz A., Raziq K., et al. Vaccines, 10(10): 1729, 2022</div>
+        <span class="pub-tag sci">SCI · Published</span>
+        <span class="pub-tag if">IF: 3.50</span>
+        <span class="pub-tag">Q1</span>
+      </div>
+      <div class="publication">
+        <div class="pub-title">Antimicrobial Activity of Moxifloxacin 4th Generation Quinolones Against H-Pylori in Tertiary Care Hospital Peshawar</div>
+        <div class="pub-venue">Subhan Z., Shah F.A., Farooq H., Shah S.H.A., Khan M.O., Rehman E., Raziq K., Ali S., Bangash S.A. Pakistan Journal of Medical &amp; Health Sciences, 16(7): 619-619, 2022</div>
+        <span class="pub-tag sci">Published</span>
+      </div>
+      <div class="publication">
+        <div class="pub-title">New Sights Into Long Non-Coding RNA LINC01133 in Cancer</div>
+        <div class="pub-venue">Jiang S., Zhang Q., Li J., Raziq K., Kang X., Liang S., Sun C., et al. Frontiers in Oncology, Vol. 12, 908162, 2022</div>
+        <span class="pub-tag sci">SCI · Published</span>
+        <span class="pub-tag if">IF: 3.40</span>
+        <span class="pub-tag">Q2</span>
+      </div>
+      <div class="publication">
+        <div class="pub-title">The Role of Digital Pathology in Enabling Remote Operations During the COVID-19 Pandemic and Beyond: A Pathologist's Perspective</div>
+        <div class="pub-venue">Bashir S., Arif S., Zia R., Mustafa G., Raziq K., Bangash S.A., Farid A., Aslam A. Pakistan BioMedical Journal, 195-199, 2022</div>
+        <span class="pub-tag sci">Published</span>
+      </div>
+      <div class="publication">
+        <div class="pub-title">Epidemiology and Susceptibility Profile of Aspergillus Species: An Experience from Tertiary Care Hospital</div>
+        <div class="pub-venue">Munir G., Farhad S., Alam S., Azim A., Hussain S., Khan S.A., Raziq K., Bangash S.A. Methods, 2022</div>
+        <span class="pub-tag sci">Published</span>
+        <span class="pub-tag if">IF: 3.60</span>
+        <span class="pub-tag">Q2</span>
+      </div>
+      <div class="publication">
+        <div class="pub-title">Competitive endogenous network of lncRNA, miRNA, and mRNA in the chemoresistance of gastrointestinal tract adenocarcinomas</div>
+        <div class="pub-venue">Raziq K., Cai M., Dong K., Wang P., Afrifa J., Fu S. Biomedicine &amp; Pharmacotherapy, Vol. 130, 110570, 2020</div>
+        <span class="pub-tag sci">SCI · Published</span>
+        <span class="pub-tag">First Author</span>
+        <span class="pub-tag if">IF: 7.415</span>
+        <span class="pub-tag">Q1</span>
+      </div>
+      <div class="publication">
+        <div class="pub-title">The Role of MicroRNAs in Lipid Metabolism and their Probable Associations for Progress and Treatment of Atherosclerosis</div>
+        <div class="pub-venue">Rehman E., Shoaib M., Khurshid A., Raziq K., Khan M.O., Mohammad N.S. Pakistan Journal of Medical &amp; Health Sciences, 2022</div>
+        <span class="pub-tag sci">Published</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Professional Experience</h2>
+    <div class="experience-item">
+      <h3>Postdoctoral Researcher</h3><span class="year">Feb 2024 – Feb 2027</span>
+      <span class="org">Anhui Agricultural University, Hefei, China</span>
+      <p>Current postdoctoral research focused on molecular genetics, cancer biology, nanovaccination, and antimicrobial biomaterials.</p>
+    </div>
+    <div class="experience-item">
+      <h3>Assistant Professor</h3><span class="year">March 2022 – August 2023</span>
+      <span class="org">Department of Health and Biological Sciences, Abasyn University, Peshawar, Pakistan</span>
+      <p>Taught undergraduate and graduate courses, supervised MS research students in microbial identification, antibiotic susceptibility, and molecular characterization projects.</p>
+    </div>
+    <div class="experience-item">
+      <h3>Senior Lecturer</h3><span class="year">Feb 2021 – Feb 2022</span>
+      <span class="org">Department of Biotechnology, CECOS University, Peshawar, Pakistan</span>
+      <p>Designed and delivered teaching and learning materials, prepared research proposals and funding applications.</p>
+    </div>
+    <div class="experience-item">
+      <h3>Lecturer</h3><span class="year">March 2017 – August 2018</span>
+      <span class="org">Department of Biological Sciences, Women University Swabi, Pakistan</span>
+      <p>Taught biotechnology and genetics courses; supervised graduate research on diabetes prevalence in women of district Swabi.</p>
+    </div>
+    <div class="experience-item">
+      <h3>Research Assistant</h3><span class="year">March 2016 – March 2017</span>
+      <span class="org">Human Molecular Genetics Lab, NIBGE, Faisalabad, Pakistan</span>
+      <p>Worked on ACE gene polymorphism and its association with type 2 diabetes under Prof. Shahid Baig. Gained expertise in DNA extraction, PCR, PAGE, karyotyping, and cell culturing.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-section">
+      <h3>Molecular Biology Techniques</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">DNA Extraction</span>
+        <span class="skill-tag">PCR (All Types)</span>
+        <span class="skill-tag">RT-PCR</span>
+        <span class="skill-tag">qPCR</span>
+        <span class="skill-tag">PAGE</span>
+        <span class="skill-tag">DNA Quantification</span>
+        <span class="skill-tag">Gel Electrophoresis</span>
+      </div>
+    </div>
+    <div class="skills-section">
+      <h3>Cell &amp; Genetic Analysis</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Cell Culturing</span>
+        <span class="skill-tag">Cell Staining</span>
+        <span class="skill-tag">Karyotyping</span>
+        <span class="skill-tag">Mutation Detection</span>
+        <span class="skill-tag">Gene Identification</span>
+        <span class="skill-tag">ceRNA Network Analysis</span>
+      </div>
+    </div>
+    <div class="skills-section">
+      <h3>Microbiology</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Bacterial Identification</span>
+        <span class="skill-tag">Antibiotic Susceptibility Testing</span>
+        <span class="skill-tag">Biochemical Testing</span>
+        <span class="skill-tag">Molecular Characterization</span>
+      </div>
+    </div>
+    <div class="skills-section">
+      <h3>Research &amp; Analysis</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Bioinformatics</span>
+        <span class="skill-tag">Scientific Writing</span>
+        <span class="skill-tag">Grant Proposals</span>
+        <span class="skill-tag">Student Supervision</span>
+        <span class="skill-tag">Laboratory Management</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="awards">
+    <h2>Honors &amp; Awards</h2>
+    <div class="awards-list">
+      <div class="award-item"><span class="award-year">2022</span><strong>Abasyn Youth Carnivals (AYS) Team Award</strong> — For successfully organizing co-curricular activities for graduate students.</div>
+      <div class="award-item"><span class="award-year">2019</span><strong>Best Prize – Class Notes Competition</strong> — Awarded for international students at Harbin Medical University, China.</div>
+      <div class="award-item"><span class="award-year">2018</span><strong>Chinese Government Scholarship (CSC)</strong> — Fully funded PhD studies at Harbin Medical University.</div>
+      <div class="award-item"><span class="award-year">2018</span><strong>Research Grant</strong> — Awarded by Women University Swabi for diabetes risk factor study among women in district Swabi, Pakistan.</div>
+      <div class="award-item"><span class="award-year">2017</span><strong>Best Visiting Faculty Member Award</strong> — Department of Biotechnology, Women University, Swabi, Pakistan.</div>
+      <div class="award-item"><span class="award-year">2016</span><strong>Team Award</strong> — For successfully organizing annual "Diabetes and Metabolic Disorders Symposium" at NIBGE, Faisalabad.</div>
+      <div class="award-item"><span class="award-year">2013</span><strong>DNA Model Representation Competition Prize</strong> — Hazara University, Mansehra, Pakistan.</div>
+      <div class="award-item"><span class="award-year">2009–11</span><strong>Merit Scholarship</strong> — Awarded for Bachelor of Science studies.</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="label">Primary Email</div>
+        <a href="mailto:khadijagenetics@yahoo.com">khadijagenetics@yahoo.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="label">Academic Email</div>
+        <a href="mailto:kdj.genetics@hrbmu.edu.cn">kdj.genetics@hrbmu.edu.cn</a>
+      </div>
+      <div class="contact-card">
+        <div class="label">Phone / WhatsApp</div>
+        <span class="text">+86 15655192757</span>
+      </div>
+      <div class="contact-card">
+        <div class="label">Current Affiliation</div>
+        <span class="text">Anhui Agricultural University, Hefei, China</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  © 2026 Dr. Khadija Raziq · Postdoctoral Researcher, Anhui Agricultural University
+</footer>
+
+</body>
+</html>
